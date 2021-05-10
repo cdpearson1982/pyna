@@ -2,7 +2,7 @@
 
 One Paragraph of your project description goes here. Describe what you're trying to do.
 What is the purpose of putting up this repo?
-
+This repository is being used to demonstrate how to version control projects with git.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine
