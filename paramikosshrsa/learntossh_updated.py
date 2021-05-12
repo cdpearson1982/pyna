@@ -9,6 +9,12 @@ import paramiko
 ## work assigned to a junior programming asset on our team
 from jrprogrammer import cmdissue
 
+def get_creds():
+    ip = input("IP: ")
+    user = input("Username: ")
+    # return [ip, user]
+    # return {"ip": ip, "user": user}
+    return (ip, user)
 
 def get_cmds() -> list:
     cmds = []
@@ -32,6 +38,9 @@ def main():
   mykey = paramiko.RSAKey.from_private_key_file("/home/student/.ssh/id_rsa")
 
   ## create SSH connection
+  creds = get_creds()
+  host = creds[0]
+  user = creds[1]
   sshsession.connect(hostname='10.10.2.3', username='bender', pkey=mykey)
 
   our_commands = get_cmds()
